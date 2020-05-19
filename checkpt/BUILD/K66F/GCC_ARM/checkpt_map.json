@@ -1,0 +1,186 @@
+[
+    {
+        "size": {
+            ".data": 16,
+            ".text": 272,
+            ".data-delta": 16,
+            ".bss-delta": 52,
+            ".bss": 52,
+            ".text-delta": 272
+        },
+        "module": "[fill]"
+    },
+    {
+        "size": {
+            ".data": 2472,
+            ".text": 48246,
+            ".data-delta": 2472,
+            ".bss-delta": 89,
+            ".bss": 89,
+            ".text-delta": 48246
+        },
+        "module": "[lib]/c.a"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 3336,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".bss": 0,
+            ".text-delta": 3336
+        },
+        "module": "[lib]/gcc.a"
+    },
+    {
+        "size": {
+            ".data": 4,
+            ".text": 180,
+            ".data-delta": 4,
+            ".bss-delta": 28,
+            ".bss": 28,
+            ".text-delta": 180
+        },
+        "module": "[lib]/misc"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 32,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".bss": 0,
+            ".text-delta": 32
+        },
+        "module": "[lib]/nosys.a"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 1,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".bss": 0,
+            ".text-delta": 1
+        },
+        "module": "[lib]/stdc++.a"
+    },
+    {
+        "size": {
+            ".data": 8,
+            ".text": 4404,
+            ".data-delta": 8,
+            ".bss-delta": 824,
+            ".bss": 824,
+            ".text-delta": 4404
+        },
+        "module": "main.o"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 14061,
+            ".data-delta": 0,
+            ".bss-delta": 1364,
+            ".bss": 1364,
+            ".text-delta": 14061
+        },
+        "module": "mbed-os/components"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 4322,
+            ".data-delta": 0,
+            ".bss-delta": 44,
+            ".bss": 44,
+            ".text-delta": 4322
+        },
+        "module": "mbed-os/drivers"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 1848,
+            ".data-delta": 0,
+            ".bss-delta": 3108,
+            ".bss": 3108,
+            ".text-delta": 1848
+        },
+        "module": "mbed-os/events"
+    },
+    {
+        "size": {
+            ".data": 99,
+            ".text": 11910,
+            ".data-delta": 99,
+            ".bss-delta": 141,
+            ".bss": 141,
+            ".text-delta": 11910
+        },
+        "module": "mbed-os/features"
+    },
+    {
+        "size": {
+            ".data": 8,
+            ".text": 2035,
+            ".data-delta": 8,
+            ".bss-delta": 131,
+            ".bss": 131,
+            ".text-delta": 2035
+        },
+        "module": "mbed-os/hal"
+    },
+    {
+        "size": {
+            ".data": 261,
+            ".text": 8436,
+            ".data-delta": 261,
+            ".bss-delta": 349,
+            ".bss": 349,
+            ".text-delta": 8436
+        },
+        "module": "mbed-os/platform"
+    },
+    {
+        "size": {
+            ".data": 168,
+            ".text": 12826,
+            ".data-delta": 168,
+            ".bss-delta": 5980,
+            ".bss": 5980,
+            ".text-delta": 12826
+        },
+        "module": "mbed-os/rtos"
+    },
+    {
+        "size": {
+            ".data": 36,
+            ".text": 15323,
+            ".data-delta": 36,
+            ".bss-delta": 950,
+            ".bss": 950,
+            ".text-delta": 15323
+        },
+        "module": "mbed-os/targets"
+    },
+    {
+        "size": {
+            ".data": 0,
+            ".text": 2048,
+            ".data-delta": 0,
+            ".bss-delta": 4,
+            ".bss": 4,
+            ".text-delta": 2048
+        },
+        "module": "wifi_mqtt/MQTT"
+    },
+    {
+        "summary": {
+            "static_ram_delta": 16136,
+            "static_ram": 16136,
+            "total_flash_delta": 132352,
+            "total_flash": 132352
+        }
+    }
+]

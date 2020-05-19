@@ -1,0 +1,22 @@
+10_1 is to connect to K66F and after typing those 
+command by TX, RX to ESP8266, ESP8266 is thought to be in togather with 
+K66F. Then, we can just use build in WiFiInterface but not UART.
+-------------------------------------------------------------------------------
+mbed-os-example-wifi is to connect K66F to WIFI by ESP8266 using
+built in WIFIInterface!
+
+    WiFiInterface *wifi;
+    wifi = WiFiInterface::get_default_instance();
+    int ret = wifi->connect(MBED_CONF_APP_WIFI_SSID, MBED_CONF_APP_WIFI_PASSWORD, 
+	                   NSAPI_SECURITY_WPA_WPA2);
+    
+    printf("MAC: %s\n", wifi->get_mac_address());
+    printf("IP: %s\n", wifi->get_ip_address());
+    printf("Netmask: %s\n", wifi->get_netmask());
+    printf("Gateway: %s\n", wifi->get_gateway());
+    printf("RSSI: %d\n\n", wifi->get_rssi());
+
+    wifi->disconnect();
+------------------------------------------------------------------------------
+10_2 demo how to send message via MQTT(wifi) between pc(python) and k66f
+both one can be subscriber and publisher

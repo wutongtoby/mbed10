@@ -16,6 +16,7 @@ const char* topic = "Mbed";
 Thread mqtt_thread(osPriorityHigh);
 EventQueue mqtt_queue;
 
+// the function used to receive message sent from pc
 void messageArrived(MQTT::MessageData& md) {
     MQTT::Message &message = md.message;
     char msg[300];
@@ -28,16 +29,22 @@ void messageArrived(MQTT::MessageData& md) {
     ++arrivedcount;
 }
 
+// the function used to send message to pc from k66f
 void publish_message(MQTT::Client<MQTTNetwork, Countdown>* client) {
     message_num++;
+
     MQTT::Message message;
     char buff[100];
+    
     sprintf(buff, "QoS0 Hello, Python! #%d", message_num);
     message.qos = MQTT::QOS0;
     message.retained = false;
     message.dup = false;
     message.payload = (void*) buff;
     message.payloadlen = strlen(buff) + 1;
+    
+    // use this to publish message to pc, and the 
+    // topic is predefined
     int rc = client->publish(topic, message);
 
     printf("rc:  %d\r\n", rc);
@@ -48,7 +55,6 @@ void publish_message(MQTT::Client<MQTTNetwork, Countdown>* client) {
 
 void close_mqtt() {
     closed = true;
-
 }
 
 int main() {
@@ -60,6 +66,8 @@ int main() {
     }
 
     printf("\nConnecting to %s...\r\n", MBED_CONF_APP_WIFI_SSID);
+
+    // connect to the WIFI hotspot
     int ret = wifi->connect(MBED_CONF_APP_WIFI_SSID, MBED_CONF_APP_WIFI_PASSWORD, NSAPI_SECURITY_WPA_WPA2);
     
     if (ret != 0) {
@@ -71,9 +79,10 @@ int main() {
     MQTTNetwork mqttNetwork(net);
     MQTT::Client<MQTTNetwork, Countdown> client(mqttNetwork);
 
-      //TODO: revise host to your ip
+    //TODO: revise host to your ip
     const char* host = "192.168.43.108";
     printf("Connecting to TCP network...\r\n");
+    // use this function to connect to the host(that is, the computer)
     int rc = mqttNetwork.connect(host, 1883);
     if (rc != 0) {
         printf("Connection error.");
@@ -98,14 +107,19 @@ int main() {
     }
 
     mqtt_thread.start(callback(&mqtt_queue, &EventQueue::dispatch_forever));
+    // send message to the subscriber
     btn2.rise(mqtt_queue.event(&publish_message, &client));
+    // disconnet from the mqtt
     btn3.rise(&close_mqtt);
     
     int num = 0;
+    // the client will first request 5 message from python(pc)
     while (num != 5) {
         client.yield(100);
         ++num;
     }
+
+    // the infinite loop wait fot interrupt from sw2 or sw3
     while (1) {
         if (closed) break;
         wait(0.5);

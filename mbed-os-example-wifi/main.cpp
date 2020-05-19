@@ -34,7 +34,8 @@ int scan_demo(WiFiInterface *wifi)
     }
 
     /* Limit number of network arbitrary to 15 */
-    count = count < 15 ? count : 15;
+    if (count >= 15)
+	count = 15;
 
     ap = new WiFiAccessPoint[count];
     count = wifi->scan(ap, count);
@@ -69,13 +70,16 @@ int main()
         return -1;
     }
 
+    // the scan_demo() function will show all visible wifi hotspot
     int count = scan_demo(wifi);
     if (count == 0) {
         printf("No WIFI APs found - can't continue further.\n");
         return -1;
     }
-
+    
     printf("\nConnecting to %s...\n", MBED_CONF_APP_WIFI_SSID);
+    
+    // connect to the hotspot according to the information we typed in the .json file.
     int ret = wifi->connect(MBED_CONF_APP_WIFI_SSID, MBED_CONF_APP_WIFI_PASSWORD, NSAPI_SECURITY_WPA_WPA2);
     if (ret != 0) {
         printf("\nConnection error: %d\n", ret);
