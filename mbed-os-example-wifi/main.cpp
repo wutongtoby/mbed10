@@ -55,7 +55,6 @@ int scan_demo(WiFiInterface *wifi)
     return count;
 }
 
-
 int main()
 {
     printf("WiFi example\n");
