@@ -1,0 +1,175 @@
+[
+    {
+        "module": "[fill]",
+        "size": {
+            ".bss": 44,
+            ".data": 16,
+            ".data-delta": 5,
+            ".bss-delta": 11,
+            ".text": 233,
+            ".text-delta": 116
+        }
+    },
+    {
+        "module": "[lib]/c.a",
+        "size": {
+            ".bss": 89,
+            ".data": 2472,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 48246,
+            ".text-delta": 16433
+        }
+    },
+    {
+        "module": "[lib]/gcc.a",
+        "size": {
+            ".bss": 0,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 3336,
+            ".text-delta": 224
+        }
+    },
+    {
+        "module": "[lib]/misc",
+        "size": {
+            ".bss": 28,
+            ".data": 4,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 180,
+            ".text-delta": 0
+        }
+    },
+    {
+        "module": "[lib]/nosys.a",
+        "size": {
+            ".bss": 0,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 32,
+            ".text-delta": 0
+        }
+    },
+    {
+        "module": "[lib]/stdc++.a",
+        "size": {
+            ".bss": 0,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 1,
+            ".text-delta": 1
+        }
+    },
+    {
+        "module": "main.o",
+        "size": {
+            ".bss": 4,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 1028,
+            ".text-delta": 0
+        }
+    },
+    {
+        "module": "mbed-os/components",
+        "size": {
+            ".bss": 1364,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 1364,
+            ".text": 14105,
+            ".text-delta": 14105
+        }
+    },
+    {
+        "module": "mbed-os/drivers",
+        "size": {
+            ".bss": 0,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 3574,
+            ".text-delta": 3380
+        }
+    },
+    {
+        "module": "mbed-os/events",
+        "size": {
+            ".bss": 3108,
+            ".data": 0,
+            ".data-delta": 0,
+            ".bss-delta": 3108,
+            ".text": 1842,
+            ".text-delta": 1842
+        }
+    },
+    {
+        "module": "mbed-os/features",
+        "size": {
+            ".bss": 141,
+            ".data": 99,
+            ".data-delta": 99,
+            ".bss-delta": 141,
+            ".text": 10270,
+            ".text-delta": 10222
+        }
+    },
+    {
+        "module": "mbed-os/hal",
+        "size": {
+            ".bss": 131,
+            ".data": 8,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 1963,
+            ".text-delta": 12
+        }
+    },
+    {
+        "module": "mbed-os/platform",
+        "size": {
+            ".bss": 349,
+            ".data": 261,
+            ".data-delta": 0,
+            ".bss-delta": 0,
+            ".text": 8364,
+            ".text-delta": 1680
+        }
+    },
+    {
+        "module": "mbed-os/rtos",
+        "size": {
+            ".bss": 5980,
+            ".data": 168,
+            ".data-delta": 0,
+            ".bss-delta": 8,
+            ".text": 12671,
+            ".text-delta": 4873
+        }
+    },
+    {
+        "module": "mbed-os/targets",
+        "size": {
+            ".bss": 306,
+            ".data": 36,
+            ".data-delta": 0,
+            ".bss-delta": 24,
+            ".text": 12196,
+            ".text-delta": 1202
+        }
+    },
+    {
+        "summary": {
+            "total_flash": 121105,
+            "static_ram_delta": 4760,
+            "static_ram": 14608,
+            "total_flash_delta": 54194
+        }
+    }
+]
